@@ -34,6 +34,8 @@ class Contractor:
     def set_total_amount_of_money_earned(self, total_amount: int):
         self.total_amount_of_money_earned = total_amount
 
+    def get_total_commission_earned(self) -> float:
+        return self.total_amount_of_money_earned * (self.percentage_service_fee_rate / 100)
 
 class TestContractor(unittest.TestCase):
     def setUp(self):
@@ -69,3 +71,10 @@ class TestContractor(unittest.TestCase):
     def test_set_total_amount_of_money_earned(self):
         self.contractor.set_total_amount_of_money_earned(1240)
         self.assertEqual(1240, self.contractor.total_amount_of_money_earned)
+
+    def test_get_total_commission_earned(self):
+        self.contractor.set_total_amount_of_money_earned(100)
+        self.contractor.set_percentage_service_fee_rate(3)
+        expected = 100 * 0.03
+        self.assertIs(type(0.01), type(self.contractor.get_total_commission_earned()), "returned object is not of type 'float'")
+        self.assertEqual(expected, self.contractor.get_total_commission_earned())

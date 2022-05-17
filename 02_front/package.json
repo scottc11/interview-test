@@ -2,9 +2,10 @@
   "name": "02_front",
   "version": "1.0.0",
   "description": "Goal: Create a simple web app that list users information from an API with ReactJs (~2h)",
-  "main": "src/index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": ""
   },
   "author": "",
   "license": "ISC",

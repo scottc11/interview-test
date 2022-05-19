@@ -21,10 +21,12 @@ function App() {
     
     return (
         <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<UserList />}/>
-                <Route path='/users/1/' element={<UserDescription />} />
-            </Routes>
+            <div className='flex h-screen'>
+                <Routes>
+                    <Route path='/' element={<UserList />} />
+                    <Route path='/users/1/' element={<UserDescription />} />
+                </Routes>
+            </div>
         </BrowserRouter>
     )
 }

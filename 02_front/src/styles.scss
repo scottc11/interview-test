@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Roboto+Mono:wght@100;400;700&family=Unica+One&display=swap');
+
+$bungee-shade: 'Bungee Shade', cursive;
+$roboto-mono: 'Roboto Mono', monospace;
+$unica-one: 'Unica One', cursive;
+
 /* SCSS HEX */
 $charcoal: #2f4858ff;
 $queen-blue: #33658aff;
@@ -8,6 +14,7 @@ $orange-red: #f26419ff;
 $app-background-color: $charcoal;
 
 body {
+    font-family: $unica-one;
     margin: 0;
     padding: 0;
 }
@@ -17,4 +24,12 @@ body {
     height: 100vh;
     background-color: $app-background-color;
     color: aliceblue;
+}
+
+
+.table {
+    & tr:hover {
+        background-color: $dark-sky-blue;
+        cursor: pointer;
+    }
 }

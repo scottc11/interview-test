@@ -4,26 +4,22 @@ import UserList from './components/UserList/UserList';
 import UserDescription from './components/UserDescription/UserDescription';
 import axios from 'axios';
 
-const getUsers = async () => {
-    const response = await axios.get("https://jsonplaceholder.typicode.com/users");
-    console.log(response);
-    return response.data;
-}
-
 function App() {
 
     const [users, setUsers] = useState([])
     useEffect(() => {
-        const users = getUsers();
-        console.log(users);
-        setUsers(users);
+        const getUsers = async () => {
+            const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+            setUsers(response.data);
+        }
+        getUsers();
     }, [])
     
     return (
         <div className='app'>
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<UserList />} />
+                    <Route path='/' element={<UserList users={users} />} />
                     <Route path='/users/1/' element={<UserDescription />} />
                 </Routes>
             </BrowserRouter>

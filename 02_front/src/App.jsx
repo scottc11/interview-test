@@ -20,12 +20,14 @@ function App() {
     }, [])
     
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<UserList />}/>
-                <Route path='/users/1/' element={<UserDescription />} />
-            </Routes>
-        </BrowserRouter>
+        <div className='app'>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<UserList />} />
+                    <Route path='/users/1/' element={<UserDescription />} />
+                </Routes>
+            </BrowserRouter>
+        </div>
     )
 }
 

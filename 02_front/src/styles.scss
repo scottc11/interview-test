@@ -1,6 +1,20 @@
-$app-background-color: black;
+/* SCSS HEX */
+$charcoal: #2f4858ff;
+$queen-blue: #33658aff;
+$dark-sky-blue: #86bbd8ff;
+$honey-yellow: #f6ae2dff;
+$orange-red: #f26419ff;
+
+$app-background-color: $charcoal;
+
+body {
+    margin: 0;
+    padding: 0;
+}
 
 .app {
+    display: flex;
+    height: 100vh;
     background-color: $app-background-color;
     color: aliceblue;
 }

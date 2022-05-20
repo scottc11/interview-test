@@ -24,12 +24,29 @@ body {
     height: 100vh;
     background-color: $app-background-color;
     color: aliceblue;
+    justify-content: center;
+    align-items: center;
 }
 
+.user-list {
+    
+}
 
 .table {
     & tr:hover {
         background-color: $dark-sky-blue;
         cursor: pointer;
+    }
+}
+
+.user-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    &--back-btn {
+        order: 1;
+        height: 100%;
     }
 }

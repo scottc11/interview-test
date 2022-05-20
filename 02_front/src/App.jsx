@@ -20,7 +20,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<UserList users={users} />} />
-                    <Route path='/users/1/' element={<UserDescription />} />
+                    <Route path='/users/:id' element={<UserDescription />} />
                 </Routes>
             </BrowserRouter>
         </div>

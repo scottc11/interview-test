@@ -1,14 +1,18 @@
 import { DataGrid } from "@mui/x-data-grid";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function UserList(props) {
     console.log(props.users);
     const columns = props.users[0] ? Object.keys(props.users[0]) : [];
-
+    const navigate = useNavigate();
+    const handleClick = (event, id) => {
+        navigate(`/users/${id}`, { replace: true });
+    }
+    
     return (
-        <div>
+        <div className="user-list">
             <table className="table">
                 <thead>
                     <tr>
@@ -21,7 +25,7 @@ function UserList(props) {
                     {
                         props.users.map((user) => {
                             return (
-                                <tr>
+                                <tr onClick={(e) => handleClick(e, user.id)}>
                                     {
                                         columns.map(col => {
                                             if (typeof user[col] === 'string' || typeof user[col] === 'number') {
@@ -39,7 +43,6 @@ function UserList(props) {
                     }
                 </tbody>
             </table>
-            <Link to="/users/1">go to user</Link>
         </div>
     )
 }

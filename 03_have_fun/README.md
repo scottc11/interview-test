@@ -1,4 +1,4 @@
-# (Minesweeper)[https://github.com/scottc11/minesweeper]
+# [Minesweeper](https://github.com/scottc11/minesweeper)
 
 I encourage you to clone the implementation of "minesweeper" I have been working on the past few weeks. It started as a programming test, and then I decided to just take it all the way. There is still a lot of work to do here, but the main functionality of the game is complete.
 

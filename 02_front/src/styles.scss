@@ -1,6 +1,77 @@
-$app-background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Roboto+Mono:wght@100;400;700&family=Unica+One&display=swap');
+
+$bungee-shade: 'Bungee Shade', cursive;
+$roboto-mono: 'Roboto Mono', monospace;
+$unica-one: 'Unica One', cursive;
+
+/* SCSS HEX */
+$charcoal: #2f4858ff;
+$queen-blue: #33658aff;
+$dark-sky-blue: #86bbd8ff;
+$honey-yellow: #f6ae2dff;
+$orange-red: #f26419ff;
+
+$app-background-color: $charcoal;
+
+body {
+    font-family: $unica-one;
+    margin: 0;
+    padding: 0;
+}
 
 .app {
+    display: flex;
+    height: 100vh;
     background-color: $app-background-color;
     color: aliceblue;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-list {
+    
+}
+
+.table {
+    border-spacing: 0;
+    & thead tr td {
+        color: $honey-yellow;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+    }
+
+    & tbody {
+
+        & tr td {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-right: 20px;
+        }
+
+        & tr:hover {
+            background-color: $dark-sky-blue;
+            cursor: pointer;
+        }
+    }
+}
+
+.user-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    &--back-btn {
+        order: 1;
+        height: 100%;
+    }
+
+    &--details {
+        & table {
+            & tr td {
+                padding-right: 10px;
+            }
+        }
+    }
 }

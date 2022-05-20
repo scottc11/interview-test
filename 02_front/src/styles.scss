@@ -33,13 +33,30 @@ body {
 }
 
 .table {
-    & tr:hover {
-        background-color: $dark-sky-blue;
-        cursor: pointer;
+    border-spacing: 0;
+    & thead tr td {
+        color: $honey-yellow;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+    }
+
+    & tbody {
+
+        & tr td {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-right: 20px;
+        }
+
+        & tr:hover {
+            background-color: $dark-sky-blue;
+            cursor: pointer;
+        }
     }
 }
 
-.user-description {
+.user-container {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -48,5 +65,13 @@ body {
     &--back-btn {
         order: 1;
         height: 100%;
+    }
+
+    &--details {
+        & table {
+            & tr td {
+                padding-right: 10px;
+            }
+        }
     }
 }

@@ -25,19 +25,42 @@ function UserDescription(props) {
     }, [])
 
     return (
-        <div className="user-description">
-            <div className="user-description--back-btn">
+        <div className="user-container">
+            <div className="user-container--back-btn">
                 <Button size="large" onClick={handleClick}>⬅</Button>
             </div>
             {
                 loading ? 
                 <CircularProgress />
                 :
-                <div className="user-description--back-btn">
-                    <div className="user--details">
-                        <div>Name: {user.name}</div>
-                        <div>Username: {user.username}</div>
-                        <div>Email: {user.email}</div>
+                <div className="user-container--back-btn">
+                    <div className="user-container--details">
+                        <table>
+                            <tr>
+                                <td>Name:</td>
+                                <td>{user.name}</td>
+                            </tr>
+                            <tr>
+                                <td>Username:</td>
+                                <td>{user.username}</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>{user.email}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone:</td>
+                                <td>{user.phone}</td>
+                            </tr>
+                            <tr>
+                                <td>Company:</td>
+                                <td>{user.company.name}</td>
+                            </tr>
+                            <tr>
+                                <td>Website:</td>
+                                <td>{user.website}</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             }
